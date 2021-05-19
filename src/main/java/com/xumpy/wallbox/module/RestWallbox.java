@@ -55,7 +55,7 @@ public class RestWallbox {
         authenticate = restTemplate.exchange(BASEURL + "auth/token/user", HttpMethod.GET, request, Authentication.class).getBody();
     }
 
-    public void refreshAuthenticate(){
+    public void refreshAuthenticateToken(){
         HttpEntity<String> request = new HttpEntity<String>(createHeaders(username, password));
         authenticate = restTemplate.exchange(BASEURL + "auth/token/user", HttpMethod.GET, request, Authentication.class).getBody();
     }

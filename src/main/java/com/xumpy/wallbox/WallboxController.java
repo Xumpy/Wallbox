@@ -12,6 +12,7 @@ public class WallboxController {
 
     @GetMapping("/start/{chargerId}")
     public String startCharging(@PathVariable Integer chargerId){
+        restWallbox.refreshAuthenticateToken();
         restWallbox.startCharging(chargerId);
 
         return "success";
@@ -19,6 +20,7 @@ public class WallboxController {
 
     @GetMapping("/stop/{chargerId}")
     public String stopCharging(@PathVariable Integer chargerId){
+        restWallbox.refreshAuthenticateToken();
         restWallbox.stopCharging(chargerId);
 
         return "success";
