@@ -1,9 +1,11 @@
 package com.xumpy.wallbox.module.model;
 
+import java.math.BigDecimal;
+
 public class Authentication {
     private String jwt;
     private Integer user_id;
-    private Integer ttl;
+    private BigDecimal ttl;
     private Boolean error;
     private Integer status;
 
@@ -23,11 +25,11 @@ public class Authentication {
         this.user_id = user_id;
     }
 
-    public Integer getTtl() {
+    public BigDecimal getTtl() {
         return ttl;
     }
 
-    public void setTtl(Integer ttl) {
+    public void setTtl(BigDecimal ttl) {
         this.ttl = ttl;
     }
 
